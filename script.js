@@ -1,6 +1,11 @@
 let userCount = 0;
 let compCount = 0;
 let usersTurn = true;
+let userCard1El = document.getElementById("userCard1");
+let compCard1El = document.getElementById("compCard1"); 
+let userCard2El = document.getElementById("userCard2");
+let compCard2El = document.getElementById("compCard2"); 
+
 
 // returns [card, countScore]
 function drawCard() {
@@ -8,42 +13,37 @@ function drawCard() {
     let card;
     switch (randomNumber) {
         case 11: 
-            card = "J";
-            return [card, 10];
+            return card = "J";
+            // return [card, 10];
         case 12:
-            card = "Q";
-            return [card, 10];
+            return card = "Q";
+            // return [card, 10];
         case 13:
-            card = "K";
-            return [card, 10];
+            return card = "K";
+            // return [card, 10];
         case 1:
-            card = "A";
-            return [card, 11];
+            return card = "A";
+            // return [card, 11];
         default:
-            card = randomNumber;
-            return [card, randomNumber];
+            return card = randomNumber;
+            // return [card, randomNumber];
     }
-    
 }
 
-function addScore(num){
-    if (usersTurn){
-        userCount += num
-    }
-    else {
-        compCount += num
-    }
-}
+// function addScore(num){
+//     if (usersTurn){
+//         userCount += num
+//     }
+//     else {
+//         compCount += num
+//     }
+// }
 
 function startGame() {
     userCount = 0;
     compCount = 0;
-    usersTurn = true;
-    let firstCard = drawCard()
-    addScore(firstCard[1]);
-    let dealerFirstCard = drawCard()
-    addScore(dealerFirstCard[1])
-
+    userCard1El.innerText = drawCard();
+    compCard1El.innerText = drawCard();
+    userCard2El.innerText = drawCard();
+    compCard2El.innerText = drawCard();
 }
-startGame()
-console.log(userCount)
