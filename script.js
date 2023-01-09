@@ -4,30 +4,39 @@ let usersTurn = true;
 let userCard1El = document.getElementById("userCard1");
 let compCard1El = document.getElementById("compCard1"); 
 let userCard2El = document.getElementById("userCard2");
-let compCard2El = document.getElementById("compCard2"); 
+let compCard2El = document.getElementById("compCard2");
+let compScore = document.getElementById("compScore");
+let userScore = document.getElementById("userScore");
 
 
 // returns [card, countScore]
 function drawCard() {
     let randomNumber = Math.floor( Math.random()*13 ) + 1
-    let card;
-    switch (randomNumber) {
-        case 11: 
-            return card = "J";
-            // return [card, 10];
+    let count = 0;
+    switch (randomNumber){
+        case 11:
+            count += 10;
+            break;
         case 12:
-            return card = "Q";
-            // return [card, 10];
+            count += 10;
+            break;
         case 13:
-            return card = "K";
-            // return [card, 10];
+            count += 10;
+            break;
         case 1:
-            return card = "A";
-            // return [card, 11];
-        default:
-            return card = randomNumber;
-            // return [card, randomNumber];
+            count += 11;
+            break;
+        default: 
+            count = randomNumber;
+            break;
     }
+    if (usersTurn){
+        userCount += count;
+    } else {
+        compCount += count;
+    }
+    return count;
+    
 }
 
 // function addScore(num){
@@ -42,8 +51,15 @@ function drawCard() {
 function startGame() {
     userCount = 0;
     compCount = 0;
+    usersTurn = true;
     userCard1El.innerText = drawCard();
+    usersTurn = false;
     compCard1El.innerText = drawCard();
+    usersTurn = true;
     userCard2El.innerText = drawCard();
+    usersTurn =  false;
     compCard2El.innerText = drawCard();
+    compScore.innerText = compCount;
+    userScore.innerText = userCount
+
 }
