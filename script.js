@@ -55,14 +55,19 @@ function startGame() {
     compCount = 0;
     usersTurn = true;
     userScoreArray[0] = drawCard();
+    userCard1El.innerText = userScoreArray[0]
     usersTurn = false;
     compScoreArray[0] = drawCard();
+    compCard1El.innerText = compScoreArray[0]
     usersTurn = true;
     userScoreArray[1] = drawCard();
+    userCard2El.innerText = userScoreArray[1]
     usersTurn =  false;
     compScoreArray[1] = drawCard();
+    compCard2El.innerText = compScoreArray[1]
     usersTurn = true;
-    compScore.innerText = compScoreArray;
-    userScore.innerText = userScoreArray
-
+    compScore.innerText = compCount;
+    userScore.innerText = userCount;
+    
 }
+
