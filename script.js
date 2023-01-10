@@ -1,5 +1,7 @@
 let userCount = 0;
 let compCount = 0;
+let userScoreArray = []
+let compScoreArray = []
 let usersTurn = true;
 let userCard1El = document.getElementById("userCard1");
 let compCard1El = document.getElementById("compCard1"); 
@@ -52,14 +54,15 @@ function startGame() {
     userCount = 0;
     compCount = 0;
     usersTurn = true;
-    userCard1El.innerText = drawCard();
+    userScoreArray[0] = drawCard();
     usersTurn = false;
-    compCard1El.innerText = drawCard();
+    compScoreArray[0] = drawCard();
     usersTurn = true;
-    userCard2El.innerText = drawCard();
+    userScoreArray[1] = drawCard();
     usersTurn =  false;
-    compCard2El.innerText = drawCard();
-    compScore.innerText = compCount;
-    userScore.innerText = userCount
+    compScoreArray[1] = drawCard();
+    usersTurn = true;
+    compScore.innerText = compScoreArray;
+    userScore.innerText = userScoreArray
 
 }

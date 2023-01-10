@@ -28,6 +28,25 @@ function startGame() {
     drawCard() for user
     drawCard() for comp
     drawCard() for user
-
 }
+
+function for userDecision 
+    do they want to draw card or stick?
+    if they draw card, update current score
+    if bust - they lose
+    if save on valid score
+    switch to userTurn False
+    call CompsTurn function
+
+function for Comp {
+    if dealersScore is less than 17 drawCard
+    if 17 or higher stick
+    who wins function()
+}
+function whoWins {
+    if compScore=== userScore - draw
+    if compScore > userScore - comp wins
+    else user wins 
+}
+
 
