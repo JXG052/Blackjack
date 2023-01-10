@@ -4,6 +4,9 @@ body {
     font-weight: bold;
     color: white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -25,4 +28,13 @@ button {
     border-radius: 2px;
     margin-bottom: 2px;
     margin-top: 2px;
+}
+
+.cardsBox {
+    border: 3pt solid white;
+    border-radius: 20px;
+    height: 20vh;
+    width: 60vw;
+    display: flex;
+    justify-content: space-evenly;
 }
