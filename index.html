@@ -9,13 +9,7 @@
 </head>
 <body>
     <button onclick="startGame()">Start Game</button>
-    <!-- Users Cards -->
-    <div class="cardsBox" id="userCardsBox">
-        <p>User: </p>
-    <p class="userCard"id="userCard1"></p>
-    <p class="userCard"id="userCard2"></p>
-    <p class="score" id="userScore"></p>
-    </div>
+    
     <!-- Computers Cards -->
     <div class="cardsBox" id="compCardsBox">
         <p>Dealer: </p>
@@ -23,6 +17,15 @@
         <p class="compCard"id="compCard2"></p>
         <p class="score" id="compScore"></p>
     </div>
+
+    <!-- Users Cards -->
+    <div class="cardsBox" id="userCardsBox">
+        <p>User: </p>
+    <p class="userCard"id="userCard1"></p>
+    <p class="userCard"id="userCard2"></p>
+    <p class="score" id="userScore"></p>
+    </div>
+
     <button onclick="drawCard()">Hit</button>
     <button onclick="compsTurn()">Stick</button>
     <p id="whoWins"></p>
