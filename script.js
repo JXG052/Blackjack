@@ -89,10 +89,24 @@ function whoWins() {
     whoWinsEl.innerText = winnerMessage;
   }
   else if(userCount > compCount) {
-    whoWinsEl = winnerMessage;
+    whoWinsEl.innerText = winnerMessage;
   }
-  else if (compCount < userCount) {
-    whoWinsEl = "You drew this time"
+  else if (compCount > userCount) {
+    whoWinsEl.innerText = loserMessage;
+  }
+  else{
+    whoWinsEl.innerText = "Draw";
   }
   
+}
+function compsTurn() {
+    usersTurn = false;
+    if (compCount >= 17) {
+        whoWins()
+    }
+    else {
+        drawCard();
+        compsTurn()
+    }
+    
 }
