@@ -8,27 +8,34 @@
     <title>BlackJack Game</title>
 </head>
 <body>
-    <button onclick="startGame()">Start Game</button>
+    <button onclick="startGame()">New Game</button>
     
     <!-- Computers Cards -->
     <div class="cardsBox" id="compCardsBox">
         <p>Dealer: </p>
-        <p class="compCard"id="compCard1"></p>
-        <p class="compCard"id="compCard2"></p>
+
+        <p class="compCard"id="compCardsArray"></p>
         <p class="score" id="compScore"></p>
     </div>
 
     <!-- Users Cards -->
     <div class="cardsBox" id="userCardsBox">
         <p>User: </p>
-    <p class="userCard"id="userCard1"></p>
-    <p class="userCard"id="userCard2"></p>
+
+    <p class="userCard"id="userCardsArray"></p>
     <p class="score" id="userScore"></p>
     </div>
 
-    <button onclick="drawCard()">Hit</button>
-    <button onclick="compsTurn()">Stick</button>
-    <p id="whoWins"></p>
+    <button onclick="hit()">Hit</button>
+    <button onclick="stick()">Stick</button>
+    <div>
+        <p id="messageBox">This is the message Box</p>
+    </div>
+    <div id="gameTallyBox">
+        <p id="userWins"></p>
+        <p id="compWins"></p>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

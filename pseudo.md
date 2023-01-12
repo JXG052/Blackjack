@@ -1,8 +1,11 @@
 # BlackJack Game
 
+## Basic version
+ - call Startgame()
+
 ## User Story:
 
-* Click Start Game
+* Call startGame()
 * User gets random num between 1 and 11
 * Dealer gets random num that we can't see
 * User gets randum num that we can see, adds to userCount
