@@ -31,10 +31,23 @@
     <div>
         <p id="messageBox">This is the message Box</p>
     </div>
-    <div id="gameTallyBox">
-        <p id="userWins"></p>
-        <p id="compWins"></p>
+    <div class="cardBox">
+    <!-- card for user wins -->
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">User Wins:</h5>
+          <p class="card-text" id="userWins">0</p>
+        </div>
     </div>
+    <!-- card for comp wins -->
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Dealer Wins:</h5>
+            <p class="card-text" id="compWins">0</p>
+        </div>
+    </div>
+</div>
+
     
     <script src="script.js"></script>
 </body>

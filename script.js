@@ -92,7 +92,7 @@ function whoWins() {
     userWinsEl.textContent = userWins;
   }
     else if (compCount > userCount) {
-    messageBox.textContent = loserMessage + "Well done for not going bust, but unfortunately neither did the dealer, and they had a higher score"
+    messageBox.textContent = loserMessage + "The dealer had a higher score"
     compWins ++
     compWinsEl.textContent = compWins;
 }
@@ -124,7 +124,7 @@ function displayMessage() {
     messageBox.textContent = `You have ${userCount} and the dealer has ${compCount}... What would you like to do?`;
     else if( userCount > 21) {
         messageBox.textContent = `Noooo! You went bust on ${userCount}. The dealer wins`;
-        compWins --
+        compWins ++
         compWinsEl.textContent = compWins;
         
     }
